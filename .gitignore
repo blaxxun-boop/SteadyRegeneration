@@ -1,0 +1,6 @@
+bin
+obj
+/packages
+SteadyRegen.sln.DotSettings.user
+.idea
+.vs
