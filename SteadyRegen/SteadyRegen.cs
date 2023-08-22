@@ -12,7 +12,7 @@ namespace SteadyRegen;
 public class SteadyRegen : BaseUnityPlugin
 {
 	private const string ModName = "Steady Regeneration";
-	private const string ModVersion = "1.0.1";
+	private const string ModVersion = "1.0.2";
 	private const string ModGUID = "org.bepinex.plugins.steadyregeneration";
 
 	public void Awake()
@@ -89,7 +89,7 @@ public class SteadyRegen : BaseUnityPlugin
 		}
 	}
 
-	[HarmonyPatch(typeof(ItemDrop.ItemData), nameof(ItemDrop.ItemData.GetTooltip), typeof(ItemDrop.ItemData), typeof(int), typeof(bool))]
+	[HarmonyPatch(typeof(ItemDrop.ItemData), nameof(ItemDrop.ItemData.GetTooltip), typeof(ItemDrop.ItemData), typeof(int), typeof(bool), typeof(float))]
 	private static class ChangeFoodTooltip
 	{
 		[UsedImplicitly]
